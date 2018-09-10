@@ -4,7 +4,7 @@ Plugin Name: FullScreen Search
 Plugin URI: https://github.com/senlin/FullScreenSearch
 Description: Fork of the FullScreenSearch plugin (https://github.com/ultimatumtheme/FullScreenSearch) that adds a Full Screen Search Modal Box
 Version: 1.1
-Author: Pieter Bos
+Author: SO WP
 Author URI: https://so-wp.com
 License: GPL3 or later
 */
