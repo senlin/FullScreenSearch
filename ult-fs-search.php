@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name: A simple plugin calls a full page search form ;)
-Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates
-Description: A brief description of the Plugin.
-Version: 1.0
-Author: Ultimatum Theme
-Author URI: https://ultimatumtheme.com
+Plugin Name: FullScreen Search
+Plugin URI: https://github.com/senlin/FullScreenSearch
+Description: Fork of the FullScreenSearch plugin (https://github.com/ultimatumtheme/FullScreenSearch) that adds a Full Screen Search Modal Box
+Version: 1.1
+Author: Pieter Bos
+Author URI: https://so-wp.com
 License: GPL3 or later
 */
 
@@ -25,8 +25,8 @@ function fullscreen_search_init(){
 }
 
 function fullscreen_search_add_scripts() {
-	wp_enqueue_script( 'ult-fs-search', plugins_url( 'assets/js/ult-fs-search.js', __FILE__ ), array( 'jquery' ), null, true );
-	wp_enqueue_style( 'ult-fs-search', plugins_url( 'assets/css/ult-fs-search.css', __FILE__ ) );
+	wp_enqueue_script( 'ult-fs-search-js', plugins_url( 'assets/js/ult-fs-search.js', __FILE__ ), array( 'jquery' ), null, true );
+	wp_enqueue_style( 'ult-fs-search-css', plugins_url( 'assets/css/ult-fs-search.css', __FILE__ ) );
 }
 
 function ult_fs_search(){
@@ -34,7 +34,7 @@ function ult_fs_search(){
 	<div id="ult-fs-search">
 		<button type="button" class="close">&times;</button>
 		<form role="search" class="form-search" method="get" id="searchform" action="<?php echo home_url( '/' );?>" >
-			<input type="text" value="" name="s" placeholder="<?php _e( 'type keyword(s) here', 'ult-fs-search' ); ?>" />
+			<input type="text" value="" name="s" placeholder="<?php _e( 'Type keyword(s) here', 'ult-fs-search' ); ?>" />
 		</form>
 	</div>
 <?php
